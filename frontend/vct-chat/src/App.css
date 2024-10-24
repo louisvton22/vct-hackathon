@@ -1,0 +1,92 @@
+.App {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+.chat-window {
+  width: 400px;
+  height: 500px;
+  border: 2px solid #333;
+  background-color: #1e1e1e;
+  margin: 0 auto 20px;
+  padding: 15px;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.message {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.message.user {
+  text-align: right;
+  background-color: #2d2d2d;
+  color: #a6e22e;
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 75%;
+  margin-left: auto;
+  border: 1px solid #3e3e3e;
+}
+
+.message.bot {
+  text-align: left;
+  background-color: #2d2d2d;
+  color: #66d9ef;
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 75%;
+  margin-right: auto;
+  border: 1px solid #3e3e3e;
+}
+
+input {
+  width: calc(100% - 110px);
+  padding: 12px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: #e0e0e0;
+  border-radius: 5px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #555;
+}
+
+button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  background-color: #3e3e3e;
+  color: #e0e0e0;
+  border: 1px solid #555;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+button:active {
+  background-color: #666;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3e3e3e;
+  border-radius: 4px;
+}
