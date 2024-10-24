@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
+
 type Message = {
   role: 'user' | 'bot';
   content: string;
@@ -43,7 +45,14 @@ function App() {
       <div className="chat-window">
         {messages.map((msg, index) => (
           <div key={index} className={`message ${msg.role}`}>
-            <strong>{msg.role === 'user' ? 'You' : 'Bot'}:</strong> {msg.content}
+            <strong>{msg.role === 'user' ? 'You' : 'Bot'}:</strong>
+            {msg.role === 'bot' ? (
+            // Use the MarkdownRenderer for bot responses
+              <MarkdownRenderer content={msg.content} />
+            ) : (
+              // Render regular text for user responses
+              <span>{msg.content}</span>
+            )}
           </div>
         ))}
       </div>
@@ -52,5 +61,19 @@ function App() {
     </div>
   );
 }
+
+interface MarkdownRendererProps {
+  content: string;
+}
+
+const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
+  return (
+    <div className="markdown-container">
+      <ReactMarkdown>
+        {content}
+      </ReactMarkdown>
+    </div>
+  );
+};
 
 export default App;
