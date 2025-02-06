@@ -3,7 +3,7 @@
 ## Submission: Individual
 
 ### Setup
-
+**Model shutdown due to resource consumption.**
 #### Installations
 Ensure that you install all the required packages through the `requirements.txt` via command line 
 ```
@@ -15,7 +15,7 @@ Ensure you have node installed as well to be able to boot up a local react serve
 
 ####
 Create a `.env` file at the root of the repository. Create two variables, "AWS_ACCESS_KEY_ID" and "AWS_SECRET_ACCESS_KEY", and "
-set them to the guest user role with permission to use the model: id: "AKIA4AQ3TYI2TC7U4JK5", key: "1vL+AEeDJWgUfuiqMUKDr7eeaWQkfgBv33lV6cAz"
+set them to the guest user role with permission to use the model.
 ### Start Frontend
 `cd` into `frontend/vct-chat` and enter `npm start` in the command line.
 You can view the page through your local host on port 300 or "localhost://3000"
